@@ -1,0 +1,8 @@
+Dockers: tutorial..
+python 3.14: tutorial..
+radmin viewer: tutorial..
+advanced_IP_Scanner: tutorial..
+  
+visual estudio code: hay se trabaja con diferentes lenguaje de codigos tales como html,app.js,style.css etc.. 
+  es un entorno donde se desarrolan diferentes cosas como paginas web, app y seda sevicios segun tu abilidad  
+  
