@@ -1,0 +1,17 @@
+CMDLT
+Get-Command
+  Get-Help
+  Get-Member
+  Get-ComputerInfo
+  
+  FUNCION
+  Muestra todos los comandos disponibles (cmdlets, funciones, etc.).
+Muestra la documentación y sintaxis de un cmdlet.
+  Muestra las propiedades y métodos de un objeto. Fundamental para la orientación a objetos.
+Proporciona un resumen detallado del hardware y software del sistema operativo.
+  
+  EJEMPLO DE USO 
+  Get-Command *service* (Busca comandos relacionados con "servicio").
+  Get-Help Get-Service -Full (Muestra documentación completa).
+  `Get-Process
+  Get-ComputerInfo -Property OsName, OsVersion, CsPhysicalMemory
