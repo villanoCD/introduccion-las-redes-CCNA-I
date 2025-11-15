@@ -1,1 +1,22 @@
 
+comandos Basicos de redes en el CMD de windows
+
+ipconfig :muestra la configuración ip de la pc
+ejemplo con ipconfig:
+ipconfig
+Propósito: Muestra la configuración TCP/IP básica para todos los adaptadores de red, incluyendo la dirección IP, la Máscara de subred y la Puerta de enlace predeterminada (Default Gateway).
+
+ipconfig /all
+Propósito: Muestra la configuración TCP/IP completa (todos los detalles) para todos los adaptadores. Esto incluye la dirección MAC (Physical Address), el Servidor DHCP, los Servidores DNS, si DHCP está habilitado, y la información de concesión (lease) de la dirección IP.
+
+ipconfig /displaydns
+Propósito: Muestra el contenido de la Caché de resolución de DNS del sistema. Esta caché almacena resoluciones de nombres de dominio recientes para acelerar futuras solicitudes.
+
+ipconfig /flushdns
+Propósito: Vacía el contenido de la Caché de resolución de DNS. Se utiliza comúnmente para solucionar problemas de resolución de nombres causados por entradas obsoletas o incorrectas en la caché.
+
+ipconfig /release
+Propósito: Envía una solicitud al servidor DHCP para liberar la dirección IP actual (desactivar la concesión) y establece la dirección IP del adaptador en 0.0.0.0. Esto prepara al adaptador para recibir una nueva dirección IP.
+
+ipconfig /renew
+Propósito: Envía una solicitud al servidor DHCP para obtener una nueva configuración de dirección IP. Generalmente se usa después de ejecutar ipconfig /release o cuando se quiere forzar la obtención de una nueva dirección.
