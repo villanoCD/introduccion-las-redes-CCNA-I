@@ -1,5 +1,6 @@
+body {
   background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+  color: white;
 }
 
 h1 {
@@ -9,7 +10,7 @@ h1 {
 }
   
 img {
-  display: inline-flexbox;
+  display: block;
   margin: auto;
   max-width: 300px;
   max-height: 300px;
