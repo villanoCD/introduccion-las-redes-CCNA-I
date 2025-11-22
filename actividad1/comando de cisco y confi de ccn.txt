@@ -1,0 +1,52 @@
+CISCO IOS: nombre del sistema operativo de los equipos de red de Cisco modos de operacion/configuracion principales en Cisco IOS:
+	
+	1.usuario
+	   	simbolo-representacion: >
+		comando: N/A
+	2.Privilegiado
+		simbolo-representacion:#
+		comando: enable
+		abreviatura: en
+	3. configuracion global
+		(config)#
+		comando: configure terminal
+		abreviatura: conf t
+	4.configuracion de interfaz
+		simbolo-representacion: (config-if)#
+		comando: interface nombre-interfaz
+		abreviatura: int nombre-abreviado
+	5.configuracion de linea
+		simbolo-representacion: (config-line)
+		comando: line nombre-linea  id-linea
+		abreviatura: lo nombre-abreviado id-linea
+Nota1: cada modo de operacion tiene un grupo de comandos que solo se pueden ejecutar dentro de dicho modo
+
+Nota2: para salir de un modo y volver al modo anterior, usamos el comando "exit", y para salir de un modo e ir directamente al modo privilegiado, usamos el comando "end"
+
+
+Configuracion: Basica para todos los equipos en este lab (Switch y Routers)
+	en
+	conf t
+	no ip domain-lookup
+	banner motd
+	hostname SD-Dapiato-R1
+	enable secret klk001#
+	username kfh privilege 15 secret Hola123@
+	ip domain-name dapiato.com
+	crypto key generate rsa
+	1024
+	ip ssh time-out 60
+	ip ssh version 2
+	ip ssh authentication-retries 3
+	line con 0
+	pass NBA123*
+	logging  syncronous
+	login local
+	line vty 0 15
+	login local
+	logging syncronous
+	transpoty input ssh
+	no transport input telnet
+	end
+	copy running-config  startup-config
+	reload
