@@ -34,8 +34,7 @@ Configuracion: Basica para todos los equipos en este lab (Switch y Routers)
 	username kfh privilege 15 secret Hola123@
 	ip domain-name dapiato.com
 	crypto key generate rsa
-
-    se debe de escribir 1024
+	1024
 	ip ssh time-out 60
 	ip ssh version 2
 	ip ssh authentication-retries 3
@@ -50,5 +49,82 @@ Configuracion: Basica para todos los equipos en este lab (Switch y Routers)
 	no transport input telnet
 	end
 	copy running-config  startup-config
-
 	reload
+------------------------------------------------------------------------
+
+configuracion del direccionamiento ipv4
+plan de direccionamiento ipv4 por cada red
+
+interfaz            Direccion	      IPRed			          Proposito
+G0/0                  (Hacia SW-Lab)          192.168.10.1-192.168.10.0/24            Gateway Lab
+G0/1 	      (Hacia SW-Adm)         192.168.20.1-192.168.20.0/24             Gateway Adm
+G0/2                 (Hacia server)              192.168.200.1-192.168.200.0/29         Gateway server
+G0/3                (Hacia Claro-SD)           10.10.1.1-10.10.1.0/30                           Enlaces  WAN
+
+
+REd Dapiato SD
+
+direccion ipv4 de red = 198.0.2.0
+prefijo de red = /24
+masscara de subred = 255.255.255.0
+cantidad de direcciones ipv4 = 256
+cantidad de equipos = 30
+direccion ipv4 del router =
+direccion ipv4 del switch =
+direccion ipv4 del broadcast =
+direcciones ipv4 estaticas =
+direcciones ipv4 por dhcp =
+
+vlsm = variable lenght subnet mask (mascara de subred de longitud variable)
+
+paso 1. identificar las propiedades de la direccion ipv4 por defecto
+198.0.2.0/24   (255.255.255.0)  = 256  direcciones ipv4
+
+paso 2. identificar la necesidades de las red actual
+equipos nesesarios: 30
+
+paso 3.  modificar la mascara de subred, para ajustarla a las necesidades reales
+	1. tomar la porcion de la mascara de subred que se puede modificar 
+		0
+	2.convertir la porcion de la mascara de subred en binario
+		00000000
+	3. encender los bits necesarios hasta que la mascara se ajuste al requerimiento
+		0000000000
+	4. convertir la porcion de la mascara de subred modificada de binario a decimal
+		.224
+	5.vuelvo a ensavlar la nuevva mascara de subred
+		255.255.255.224
+			/27
+
+
+direccion ipv4 de red                        =            198.0.2.0
+prefijo de red                                       =            /27
+masscara de subred                         =            255.255.255.224
+cantidad de direcciones ipv4 = 32
+cantidad de equipos = 30
+direccion ipv4 del router =198.0.2.0
+direccion ipv4 del switch =198.0.2.31
+direciones d]ipv4 disponibles =30
+direccion ipv4 del router =.198.0.2.1
+direciones ipv4 del sw1 = 198.0.2.2
+direccion ipv4 del sw2=  198.0.2.3
+direcion ipv4 de  server = 198.0.0.2.4
+direccion ipv4 del soporte =198.0.0.2.5
+coordinador  = 198.0.0.2.6
+secretar = 198.0.0.2.7
+director= 198.0.2.8
+direcciones ipv4 por dhcp = desde la 198.0.2.9 hasta la 198.0.2.30
+direcciones ipv4 estaticas =
+
+
+
+RED #1 (198.0.2.0 - 198.0.0.31)
+red #2 (198.0.2.32 - 198.0.0.63)
+red #1 (198.0.2.64 - 198.0.0.95)
+red #1 (198.0.2..96- 198.0.0.127)
+
+
+
+
+
+
