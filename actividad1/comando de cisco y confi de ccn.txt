@@ -34,7 +34,8 @@ Configuracion: Basica para todos los equipos en este lab (Switch y Routers)
 	username kfh privilege 15 secret Hola123@
 	ip domain-name dapiato.com
 	crypto key generate rsa
-	1024
+
+    se debe de escribir 1024
 	ip ssh time-out 60
 	ip ssh version 2
 	ip ssh authentication-retries 3
@@ -49,4 +50,5 @@ Configuracion: Basica para todos los equipos en este lab (Switch y Routers)
 	no transport input telnet
 	end
 	copy running-config  startup-config
+
 	reload
