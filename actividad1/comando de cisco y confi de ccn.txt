@@ -123,6 +123,105 @@ red #2 (198.0.2.32 - 198.0.0.63)
 red #1 (198.0.2.64 - 198.0.0.95)
 red #1 (198.0.2..96- 198.0.0.127)
 
+--------------------------------------------------------------------------------------
+
+programar un router:-CLASE 06/12/2025
+
+COMANDOS PARA AGRAGAR UNA DIRECCION IP A UNA INTERFAS DE RED DE ROUTER:
+	int: inperface  el nombre de -interface
+	 decs (descripcion) mensaje o descripcion el mensaje deve de estar dentro de comillas""
+	IP ADD:(agregar) una direcion ip  mascara subred
+	NO shut(enceder) 
+	exit(salir)
+
+	Ejemplos:
+
+	int g0/0 (gigabit eternet) si fuera un swish (int g0/1)
+	decs(interfac de red de la lan router)
+	IP ADD 10.0.0.0.1 mascara de subred 255.255.255.0
+	no shut
+	exit
+Ejemplos mas directos: prof kfh
+	int nombre interfaz
+	desc mensaje o descripcion 
+	ip add direccion 
+	no shut	
+	exit
+-----------------------------------------------------------------
+comandos para impletmentar el enrutamiento estatico en router cisco en el modo de configruacion global:
+opcion 1
+ip router direccion-ip-red-destino mascara-subred-destino direcion-ip-interfaz-router-vecino
+opcion 2
+ip router direccion-ip-red-destino mascara-subred-destino direcion-ip-interfaz-router-local
+	 
+
+ejemplo
+
+opcion 1
+ip route 172.0.100.0   255.255.192.0    100.0.5.22
+opcion 2
+ip route 172.0.100.0  255.255.192.0 g0/1
+--------------------------------------------
+ejercicios  conectar la red:
+nat-carbe
+	claro
+		dapiato-sd
+	altice
+		dapiato-azua
+nat-usa
+	atlanta-ISP
+		google
+	san-francisco-ISP
+		facebook
+-------------------------------------------
+router dapiato
+	conoce:
+		claro
+	no conoce:
+		dapiato-azua
+		altice
+		nap-caribe
+		nap-usa
+		atlanta-isp
+		goofle
+		facebook
+esquema
+ip router ip-red-dapiato-azua mascara-subred-dapiato-azua ip-interfaz-claro
+ip router ip-red-altice mascara-subred-altice ip-interfaz-claro
+ip router ip-red-nap-caribe mascara-subred-nap-caribe ip-interfaz-claro
+ip router ip-red-nap-usa mascara-subred-nap-usa ip-interfaz-claro
+ip router ip-red-atlanta mascara-subred-atlanta ip-interfaz-claro
+ip router ip-red-san-francisco mascara-subred-san-francisco ip-interfaz-claro
+ip router ip-red-google mascara-subred-google ip-interfaz-claro
+ip router ip-red-facebook mascara-subred-facebook ip-interfaz-claro
+
+conexion entre router dapiato-sd y router claro
+183.200.30.0       ->   direccion de red
+183.200.30.1       ->   direccion ip router dapiato-sd(int g0/1)  
+183.200.30.2       ->   direccion ip router claro (int g0/0)
+183.200.30.3       ->   direccion de broadcast
+
+comandos completos
+en 
+conf t
+ip router ip-red-dapiato-azua mascara-subred-dapiato-azua ip-interfaz-claro
+ip router ip-red-altice mascara-subred-altice ip-interfaz-claro
+ip router ip-red-nap-caribe mascara-subred-nap-caribe ip-interfaz-claro
+ip router ip-red-nap-usa mascara-subred-nap-usa ip-interfaz-claro
+ip router ip-red-atlanta mascara-subred-atlanta ip-interfaz-claro
+ip router ip-red-san-francisco mascara-subred-san-francisco ip-interfaz-claro
+ip router ip-red-google mascara-subred-google ip-interfaz-claro
+ip router ip-red-facebook mascara-subred-facebook ip-interfaz-claro
+end
+copy run start
+reload
+
+-------------------------------------------------------
+practica #1
+conectar diferentes redes 
+
+
+
 
 
 
