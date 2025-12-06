@@ -215,10 +215,122 @@ ip router ip-red-facebook mascara-subred-facebook ip-interfaz-claro
 end
 copy run start
 reload
+-----------------------------------------------------
+Red Dapiato SD:
+	prefijo de red = /24 => /27
+	máscara de subred = 255.255.255.0 => 255.255.255.224
+	cantidad de direcciones ipv4 = 256 => 32
+	cantidad de equipos = 30
+	dirección IPv4 de red = 198.0.2.0
+	dirección IPv4 del broadcast = 198.0.2.31
+	dirección IPv4 disponibles = 30
+	dirección IPv4 del router = 198.0.2.1
+	dirección IPv4 del switch1 = 198.0.2.2
+	dirección IPv4 del switch2 = 198.0.2.3
+	dirección IPv4 del server = 198.0.2.4
+	dirección IPv4 del soporte = 198.0.2.5
+	dirección IPv4 de la coordinadora = 198.0.2.6
+	dirección IPv4 de la secretaria = 198.0.2.7
+	dirección IPv4 del director = 198.0.2.8
+	direcciones IPv4 por dhcp = desde la 198.0.2.9 hasta la 198.0.2.30
+Red Dapiato Azua:
+	prefijo de red = /24 => /27
+	máscara de subred = 255.255.255.0 => 255.255.255.224
+	cantidad de direcciones ipv4 = 256 => 32
+	cantidad de equipos = 30
+	dirección IPv4 de red = 200.0.2.0
+	dirección IPv4 del broadcast = 200.0.2.31
+	dirección IPv4 disponibles = 30
+	dirección IPv4 del router = 200.0.2.1
+	dirección IPv4 del switch1 = 200.0.2.2
+	dirección IPv4 del switch2 = 200.0.2.3
+	dirección IPv4 del server = 200.0.2.4
+	dirección IPv4 del soporte = 200.0.2.5
+	dirección IPv4 de la coordinadora = 200.0.2.6
+	dirección IPv4 de la secretaria = 200.0.2.7
+	dirección IPv4 del director = 200.0.2.8
+	direcciones IPv4 por dhcp = desde la 200.0.2.9 hasta la 200.0.2.30
+Red Google.com:
+	prefijo de red = /24
+	máscara de subred = 255.255.255.0
+	cantidad de direcciones ipv4 = 256
+	cantidad de equipos = 254
+	dirección IPv4 de red = 142.250.105.0
+	dirección IPv4 del broadcast = 142.250.105.255
+	dirección IPv4 disponibles = 254
+	dirección IPv4 del router = 142.250.105.1
+	dirección IPv4 del switch1 = 142.250.105.2
+	direcciones IPv4 por dhcp = desde la 142.250.105.3 hasta la 142.250.105.254
 
+Red Dapiato-SD - Claro:
+	prefijo de red = /24 => 30
+	máscara de subred = 255.255.255.252
+	cantidad de direcciones ipv4 = 4
+	cantidad de equipos = 2
+	dirección IPv4 de red = 104.97.2.0
+	dirección IPv4 del broadcast = 104.97.2.3
+	dirección IPv4 disponibles = 2
+	dirección IPv4 del Dapiato-SD = 104.97.2.1
+	dirección IPv4 del Claro = 104.97.2.2
+
+Red Dapiato-Azua - Altice:
+	prefijo de red = /24 => 30
+	máscara de subred = 255.255.255.252
+	cantidad de direcciones ipv4 = 4
+	cantidad de equipos = 2
+	dirección IPv4 de red = 110.97.2.0
+	dirección IPv4 del broadcast = 110.97.2.3
+	dirección IPv4 disponibles = 2
+	dirección IPv4 del Dapiato-Azua = 110.97.2.1
+	dirección IPv4 del Altice = 110.97.2.2
+
+Red Claro - Nap-Caribe:
+	prefijo de red = /24 => 30
+	máscara de subred = 255.255.255.0
+	cantidad de direcciones ipv4 = 4
+	cantidad de equipos = 2
+	dirección IPv4 de red = 50.1.0.0
+	dirección IPv4 del broadcast = 50.1.0.3
+	dirección IPv4 disponibles = 2
+	dirección IPv4 del Claro = 50.1.0.1
+	dirección IPv4 del Nap-Caribe = 50.1.0.2
+
+Red Altice - Nap-Caribe:
+	prefijo de red = /24 => 30
+	máscara de subred = 255.255.255.0
+	cantidad de direcciones ipv4 = 4
+	cantidad de equipos = 2
+	dirección IPv4 de red = 100.5.2.0
+	dirección IPv4 del broadcast = 100.5.2.3
+	dirección IPv4 disponibles = 2
+	dirección IPv4 del Altice = 100.5.2.1
+	dirección IPv4 del Nap-Caribe = 100.5.2.2
+
+Red Nap-Caribe - Nap-USA:
+	prefijo de red = /24 => 30
+	máscara de subred = 255.255.255.0
+	cantidad de direcciones ipv4 = 4
+	cantidad de equipos = 2
+	dirección IPv4 de red = 83.64.3.0
+	dirección IPv4 del broadcast = 3.64.3.3
+	dirección IPv4 disponibles = 2
+	dirección IPv4 del Nap-Caribe = 83.64.3.1
+	dirección IPv4 del Nap-USA = 83.64.3.2
+
+Red Nap-USA - Google.com:
+	prefijo de red = /24 => 30
+	máscara de subred = 255.255.255.0
+	cantidad de direcciones ipv4 = 4
+	cantidad de equipos = 2
+	dirección IPv4 de red = 63.42.2.0
+	dirección IPv4 del broadcast = 63.42.2.0
+	dirección IPv4 disponibles = 2
+	dirección IPv4 del Nap-USA = 63.42.2.1
+	dirección IPv4 del Google.com = 63.42.2.2
 -------------------------------------------------------
 practica #1
 conectar diferentes redes 
+
 
 
 
