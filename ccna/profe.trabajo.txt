@@ -1,0 +1,2 @@
+notas
+aprender : python ,javascri, html, css
